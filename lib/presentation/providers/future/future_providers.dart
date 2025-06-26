@@ -29,3 +29,8 @@ class PokemonId extends _$PokemonId {
     }
   }
 }
+
+@Riverpod(keepAlive: true)
+Future<String> pokemon(Ref ref, int pokemonId) async {
+  return await PokemonInformation.getPokemonName(pokemonId);
+}
