@@ -2,7 +2,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'state_provider.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class Counter extends _$Counter {
   @override
   int build() {
@@ -26,7 +26,7 @@ class DarkMode extends _$DarkMode {
   }
 }
 
-@riverpod
+@Riverpod(keepAlive: true)
 class UserName extends _$UserName {
   @override
   String build() {
